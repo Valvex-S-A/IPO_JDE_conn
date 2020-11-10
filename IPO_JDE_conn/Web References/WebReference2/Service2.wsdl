@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GAL_Pobierz_zdjecia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_zawieszki" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="nr_zd" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GAL_Pobierz_zdjeciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GAL_Pobierz_zdjeciaResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GAL_dane_zlecenia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_zlec" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GAL_dane_zleceniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GAL_dane_zleceniaResult" type="tns:ArrayOfIPO_ZLECENIA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIPO_ZLECENIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IPO_ZLECENIA" nillable="true" type="tns:IPO_ZLECENIA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IPO_ZLECENIA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ipo_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Indeks_zlecenia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contractor_id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="zlec_wew" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nr_rysunku" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Expr1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Expr2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ipo_nr_zlec" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nr_ITM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nr_zam_klienta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="start_zam" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="stop_zam" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ilosc_zam" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ilosc_wypr" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ilosc_brak" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nr_serii" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="magazyn_wej" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status_zam" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dataUtworzenia" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="priorytet" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="wsp" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="KOLOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KOD_PLAN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="hala_id" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cecha_A" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cecha_B" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cecha_P" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cecha_Q" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAZWA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GAL_zawieszki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="item_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GAL_zawieszkiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GAL_zawieszkiResult" type="tns:ArrayOfGAL_ZAWIESZKI" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGAL_ZAWIESZKI">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GAL_ZAWIESZKI" nillable="true" type="tns:GAL_ZAWIESZKI" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GAL_ZAWIESZKI">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nr_rysunku" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nr_zawieszki" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Program" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Il_szt" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Komentarz" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ilosc_zdjęć" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GALMAL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Wyczysc_zlecenie_z_telewizora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nr_zlecenia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Wyczysc_zlecenie_z_telewizoraResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GAL_Powody_brakow">
+        <s:complexType />
+      </s:element>
+      <s:element name="GAL_Powody_brakowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GAL_Powody_brakowResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Zaloz_transferM4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mag_z" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lok_z" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="litm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mag_do" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="JM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="utworzyl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="komentarz" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Zaloz_transferM4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Zaloz_transferM4Result" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Date2JT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Date2JTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Date2JTResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Time2JT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Time2JTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Time2JTResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Wyczysc_zlecenia_na_telewizorze">
+        <s:complexType />
+      </s:element>
+      <s:element name="Wyczysc_zlecenia_na_telewizorzeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendToTCPListener">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Server" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendToTCPListenerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendToTCPListenerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Aktualizuj_dni">
+        <s:complexType />
+      </s:element>
+      <s:element name="Aktualizuj_dniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Aktualizuj_dniResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="ArrayOfIPO_ZLECENIA" nillable="true" type="tns:ArrayOfIPO_ZLECENIA" />
+      <s:element name="ArrayOfGAL_ZAWIESZKI" nillable="true" type="tns:ArrayOfGAL_ZAWIESZKI" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="double" type="s:double" />
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GAL_Pobierz_zdjeciaSoapIn">
+    <wsdl:part name="parameters" element="tns:GAL_Pobierz_zdjecia" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Pobierz_zdjeciaSoapOut">
+    <wsdl:part name="parameters" element="tns:GAL_Pobierz_zdjeciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaSoapIn">
+    <wsdl:part name="parameters" element="tns:GAL_dane_zlecenia" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaSoapOut">
+    <wsdl:part name="parameters" element="tns:GAL_dane_zleceniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiSoapIn">
+    <wsdl:part name="parameters" element="tns:GAL_zawieszki" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiSoapOut">
+    <wsdl:part name="parameters" element="tns:GAL_zawieszkiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraSoapIn">
+    <wsdl:part name="parameters" element="tns:Wyczysc_zlecenie_z_telewizora" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraSoapOut">
+    <wsdl:part name="parameters" element="tns:Wyczysc_zlecenie_z_telewizoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Powody_brakowSoapIn">
+    <wsdl:part name="parameters" element="tns:GAL_Powody_brakow" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Powody_brakowSoapOut">
+    <wsdl:part name="parameters" element="tns:GAL_Powody_brakowResponse" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4SoapIn">
+    <wsdl:part name="parameters" element="tns:Zaloz_transferM4" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4SoapOut">
+    <wsdl:part name="parameters" element="tns:Zaloz_transferM4Response" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTSoapIn">
+    <wsdl:part name="parameters" element="tns:Date2JT" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTSoapOut">
+    <wsdl:part name="parameters" element="tns:Date2JTResponse" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTSoapIn">
+    <wsdl:part name="parameters" element="tns:Time2JT" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTSoapOut">
+    <wsdl:part name="parameters" element="tns:Time2JTResponse" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeSoapIn">
+    <wsdl:part name="parameters" element="tns:Wyczysc_zlecenia_na_telewizorze" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeSoapOut">
+    <wsdl:part name="parameters" element="tns:Wyczysc_zlecenia_na_telewizorzeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendToTCPListenerSoapIn">
+    <wsdl:part name="parameters" element="tns:SendToTCPListener" />
+  </wsdl:message>
+  <wsdl:message name="SendToTCPListenerSoapOut">
+    <wsdl:part name="parameters" element="tns:SendToTCPListenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Aktualizuj_dniSoapIn">
+    <wsdl:part name="parameters" element="tns:Aktualizuj_dni" />
+  </wsdl:message>
+  <wsdl:message name="Aktualizuj_dniSoapOut">
+    <wsdl:part name="parameters" element="tns:Aktualizuj_dniResponse" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Pobierz_zdjeciaHttpGetIn">
+    <wsdl:part name="id_zawieszki" type="s:string" />
+    <wsdl:part name="nr_zd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Pobierz_zdjeciaHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaHttpGetIn">
+    <wsdl:part name="id_zlec" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIPO_ZLECENIA" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiHttpGetIn">
+    <wsdl:part name="item_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGAL_ZAWIESZKI" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraHttpGetIn">
+    <wsdl:part name="nr_zlecenia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraHttpGetOut" />
+  <wsdl:message name="GAL_Powody_brakowHttpGetIn" />
+  <wsdl:message name="GAL_Powody_brakowHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4HttpGetIn">
+    <wsdl:part name="mag_z" type="s:string" />
+    <wsdl:part name="lok_z" type="s:string" />
+    <wsdl:part name="litm" type="s:string" />
+    <wsdl:part name="mag_do" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="JM" type="s:string" />
+    <wsdl:part name="utworzyl" type="s:string" />
+    <wsdl:part name="komentarz" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4HttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTHttpGetIn">
+    <wsdl:part name="dt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTHttpGetIn">
+    <wsdl:part name="dt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeHttpGetIn" />
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeHttpGetOut" />
+  <wsdl:message name="SendToTCPListenerHttpGetIn">
+    <wsdl:part name="Server" type="s:string" />
+    <wsdl:part name="port" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToTCPListenerHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Aktualizuj_dniHttpGetIn" />
+  <wsdl:message name="Aktualizuj_dniHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Pobierz_zdjeciaHttpPostIn">
+    <wsdl:part name="id_zawieszki" type="s:string" />
+    <wsdl:part name="nr_zd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_Pobierz_zdjeciaHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaHttpPostIn">
+    <wsdl:part name="id_zlec" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_dane_zleceniaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIPO_ZLECENIA" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiHttpPostIn">
+    <wsdl:part name="item_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GAL_zawieszkiHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGAL_ZAWIESZKI" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraHttpPostIn">
+    <wsdl:part name="nr_zlecenia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenie_z_telewizoraHttpPostOut" />
+  <wsdl:message name="GAL_Powody_brakowHttpPostIn" />
+  <wsdl:message name="GAL_Powody_brakowHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4HttpPostIn">
+    <wsdl:part name="mag_z" type="s:string" />
+    <wsdl:part name="lok_z" type="s:string" />
+    <wsdl:part name="litm" type="s:string" />
+    <wsdl:part name="mag_do" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="JM" type="s:string" />
+    <wsdl:part name="utworzyl" type="s:string" />
+    <wsdl:part name="komentarz" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Zaloz_transferM4HttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTHttpPostIn">
+    <wsdl:part name="dt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Date2JTHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTHttpPostIn">
+    <wsdl:part name="dt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Time2JTHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeHttpPostIn" />
+  <wsdl:message name="Wyczysc_zlecenia_na_telewizorzeHttpPostOut" />
+  <wsdl:message name="SendToTCPListenerHttpPostIn">
+    <wsdl:part name="Server" type="s:string" />
+    <wsdl:part name="port" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToTCPListenerHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Aktualizuj_dniHttpPostIn" />
+  <wsdl:message name="Aktualizuj_dniHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Service2Soap">
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <wsdl:input message="tns:GAL_Pobierz_zdjeciaSoapIn" />
+      <wsdl:output message="tns:GAL_Pobierz_zdjeciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <wsdl:input message="tns:GAL_dane_zleceniaSoapIn" />
+      <wsdl:output message="tns:GAL_dane_zleceniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <wsdl:input message="tns:GAL_zawieszkiSoapIn" />
+      <wsdl:output message="tns:GAL_zawieszkiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <wsdl:input message="tns:Wyczysc_zlecenie_z_telewizoraSoapIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenie_z_telewizoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <wsdl:input message="tns:GAL_Powody_brakowSoapIn" />
+      <wsdl:output message="tns:GAL_Powody_brakowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <wsdl:input message="tns:Zaloz_transferM4SoapIn" />
+      <wsdl:output message="tns:Zaloz_transferM4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <wsdl:input message="tns:Date2JTSoapIn" />
+      <wsdl:output message="tns:Date2JTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <wsdl:input message="tns:Time2JTSoapIn" />
+      <wsdl:output message="tns:Time2JTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <wsdl:input message="tns:Wyczysc_zlecenia_na_telewizorzeSoapIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenia_na_telewizorzeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <wsdl:input message="tns:SendToTCPListenerSoapIn" />
+      <wsdl:output message="tns:SendToTCPListenerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <wsdl:input message="tns:Aktualizuj_dniSoapIn" />
+      <wsdl:output message="tns:Aktualizuj_dniSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service2HttpGet">
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <wsdl:input message="tns:GAL_Pobierz_zdjeciaHttpGetIn" />
+      <wsdl:output message="tns:GAL_Pobierz_zdjeciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <wsdl:input message="tns:GAL_dane_zleceniaHttpGetIn" />
+      <wsdl:output message="tns:GAL_dane_zleceniaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <wsdl:input message="tns:GAL_zawieszkiHttpGetIn" />
+      <wsdl:output message="tns:GAL_zawieszkiHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <wsdl:input message="tns:Wyczysc_zlecenie_z_telewizoraHttpGetIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenie_z_telewizoraHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <wsdl:input message="tns:GAL_Powody_brakowHttpGetIn" />
+      <wsdl:output message="tns:GAL_Powody_brakowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <wsdl:input message="tns:Zaloz_transferM4HttpGetIn" />
+      <wsdl:output message="tns:Zaloz_transferM4HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <wsdl:input message="tns:Date2JTHttpGetIn" />
+      <wsdl:output message="tns:Date2JTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <wsdl:input message="tns:Time2JTHttpGetIn" />
+      <wsdl:output message="tns:Time2JTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <wsdl:input message="tns:Wyczysc_zlecenia_na_telewizorzeHttpGetIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenia_na_telewizorzeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <wsdl:input message="tns:SendToTCPListenerHttpGetIn" />
+      <wsdl:output message="tns:SendToTCPListenerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <wsdl:input message="tns:Aktualizuj_dniHttpGetIn" />
+      <wsdl:output message="tns:Aktualizuj_dniHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service2HttpPost">
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <wsdl:input message="tns:GAL_Pobierz_zdjeciaHttpPostIn" />
+      <wsdl:output message="tns:GAL_Pobierz_zdjeciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <wsdl:input message="tns:GAL_dane_zleceniaHttpPostIn" />
+      <wsdl:output message="tns:GAL_dane_zleceniaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <wsdl:input message="tns:GAL_zawieszkiHttpPostIn" />
+      <wsdl:output message="tns:GAL_zawieszkiHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <wsdl:input message="tns:Wyczysc_zlecenie_z_telewizoraHttpPostIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenie_z_telewizoraHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <wsdl:input message="tns:GAL_Powody_brakowHttpPostIn" />
+      <wsdl:output message="tns:GAL_Powody_brakowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <wsdl:input message="tns:Zaloz_transferM4HttpPostIn" />
+      <wsdl:output message="tns:Zaloz_transferM4HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <wsdl:input message="tns:Date2JTHttpPostIn" />
+      <wsdl:output message="tns:Date2JTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <wsdl:input message="tns:Time2JTHttpPostIn" />
+      <wsdl:output message="tns:Time2JTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <wsdl:input message="tns:Wyczysc_zlecenia_na_telewizorzeHttpPostIn" />
+      <wsdl:output message="tns:Wyczysc_zlecenia_na_telewizorzeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <wsdl:input message="tns:SendToTCPListenerHttpPostIn" />
+      <wsdl:output message="tns:SendToTCPListenerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <wsdl:input message="tns:Aktualizuj_dniHttpPostIn" />
+      <wsdl:output message="tns:Aktualizuj_dniHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <soap:operation soapAction="http://tempuri.org/GAL_Pobierz_zdjecia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <soap:operation soapAction="http://tempuri.org/GAL_dane_zlecenia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <soap:operation soapAction="http://tempuri.org/GAL_zawieszki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <soap:operation soapAction="http://tempuri.org/Wyczysc_zlecenie_z_telewizora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <soap:operation soapAction="http://tempuri.org/GAL_Powody_brakow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <soap:operation soapAction="http://tempuri.org/Zaloz_transferM4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <soap:operation soapAction="http://tempuri.org/Date2JT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <soap:operation soapAction="http://tempuri.org/Time2JT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <soap:operation soapAction="http://tempuri.org/Wyczysc_zlecenia_na_telewizorze" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <soap:operation soapAction="http://tempuri.org/SendToTCPListener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <soap:operation soapAction="http://tempuri.org/Aktualizuj_dni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service2Soap12" type="tns:Service2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <soap12:operation soapAction="http://tempuri.org/GAL_Pobierz_zdjecia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <soap12:operation soapAction="http://tempuri.org/GAL_dane_zlecenia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <soap12:operation soapAction="http://tempuri.org/GAL_zawieszki" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <soap12:operation soapAction="http://tempuri.org/Wyczysc_zlecenie_z_telewizora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <soap12:operation soapAction="http://tempuri.org/GAL_Powody_brakow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <soap12:operation soapAction="http://tempuri.org/Zaloz_transferM4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <soap12:operation soapAction="http://tempuri.org/Date2JT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <soap12:operation soapAction="http://tempuri.org/Time2JT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <soap12:operation soapAction="http://tempuri.org/Wyczysc_zlecenia_na_telewizorze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <soap12:operation soapAction="http://tempuri.org/SendToTCPListener" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <soap12:operation soapAction="http://tempuri.org/Aktualizuj_dni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service2HttpGet" type="tns:Service2HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <http:operation location="/GAL_Pobierz_zdjecia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <http:operation location="/GAL_dane_zlecenia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <http:operation location="/GAL_zawieszki" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <http:operation location="/Wyczysc_zlecenie_z_telewizora" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <http:operation location="/GAL_Powody_brakow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <http:operation location="/Zaloz_transferM4" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <http:operation location="/Date2JT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <http:operation location="/Time2JT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <http:operation location="/Wyczysc_zlecenia_na_telewizorze" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <http:operation location="/SendToTCPListener" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <http:operation location="/Aktualizuj_dni" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service2HttpPost" type="tns:Service2HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GAL_Pobierz_zdjecia">
+      <http:operation location="/GAL_Pobierz_zdjecia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_dane_zlecenia">
+      <http:operation location="/GAL_dane_zlecenia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GAL_zawieszki">
+      <http:operation location="/GAL_zawieszki" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenie_z_telewizora">
+      <http:operation location="/Wyczysc_zlecenie_z_telewizora" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GAL_Powody_brakow">
+      <http:operation location="/GAL_Powody_brakow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zaloz_transferM4">
+      <http:operation location="/Zaloz_transferM4" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Date2JT">
+      <http:operation location="/Date2JT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Time2JT">
+      <http:operation location="/Time2JT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wyczysc_zlecenia_na_telewizorze">
+      <http:operation location="/Wyczysc_zlecenia_na_telewizorze" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendToTCPListener">
+      <http:operation location="/SendToTCPListener" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aktualizuj_dni">
+      <http:operation location="/Aktualizuj_dni" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service2">
+    <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
+      <soap:address location="http://192.168.1.20:10001/Service2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
+      <soap12:address location="http://192.168.1.20:10001/Service2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service2HttpGet" binding="tns:Service2HttpGet">
+      <http:address location="http://192.168.1.20:10001/Service2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service2HttpPost" binding="tns:Service2HttpPost">
+      <http:address location="http://192.168.1.20:10001/Service2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ZrobBoosta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Nr_zlec_ipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZrobBoostaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZrobBoostaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Odrzuc_zlecenie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_zlec" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_usera" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Odrzuc_zlecenieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Odrzuc_zlecenieResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usuń_zamiennik">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_klucz" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usuń_zamiennikResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuń_zamiennikResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Zmien_blokade_indeksu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="indeks" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blokada" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Zmien_blokade_indeksuResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Dodaj_zamiennik_id">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_potrzeby" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="litm_zamiennik" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilosc" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dodaj_zamiennik_idResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dodaj_zamiennik_idResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dodaj_zamiennik">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nr_szablonu" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="litm_materialu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="litm_zamiennik" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilosc" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dodaj_zamiennikResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dodaj_zamiennikResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ZrobBoostaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZrobBoosta" />
+  </wsdl:message>
+  <wsdl:message name="ZrobBoostaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZrobBoostaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Odrzuc_zlecenieSoapIn">
+    <wsdl:part name="parameters" element="tns:Odrzuc_zlecenie" />
+  </wsdl:message>
+  <wsdl:message name="Odrzuc_zlecenieSoapOut">
+    <wsdl:part name="parameters" element="tns:Odrzuc_zlecenieResponse" />
+  </wsdl:message>
+  <wsdl:message name="Usuń_zamiennikSoapIn">
+    <wsdl:part name="parameters" element="tns:Usuń_zamiennik" />
+  </wsdl:message>
+  <wsdl:message name="Usuń_zamiennikSoapOut">
+    <wsdl:part name="parameters" element="tns:Usuń_zamiennikResponse" />
+  </wsdl:message>
+  <wsdl:message name="Zmien_blokade_indeksuSoapIn">
+    <wsdl:part name="parameters" element="tns:Zmien_blokade_indeksu" />
+  </wsdl:message>
+  <wsdl:message name="Zmien_blokade_indeksuSoapOut">
+    <wsdl:part name="parameters" element="tns:Zmien_blokade_indeksuResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dodaj_zamiennik_idSoapIn">
+    <wsdl:part name="parameters" element="tns:Dodaj_zamiennik_id" />
+  </wsdl:message>
+  <wsdl:message name="Dodaj_zamiennik_idSoapOut">
+    <wsdl:part name="parameters" element="tns:Dodaj_zamiennik_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dodaj_zamiennikSoapIn">
+    <wsdl:part name="parameters" element="tns:Dodaj_zamiennik" />
+  </wsdl:message>
+  <wsdl:message name="Dodaj_zamiennikSoapOut">
+    <wsdl:part name="parameters" element="tns:Dodaj_zamiennikResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPOSoap">
+    <wsdl:operation name="ZrobBoosta">
+      <wsdl:input message="tns:ZrobBoostaSoapIn" />
+      <wsdl:output message="tns:ZrobBoostaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Odrzuc_zlecenie">
+      <wsdl:input message="tns:Odrzuc_zlecenieSoapIn" />
+      <wsdl:output message="tns:Odrzuc_zlecenieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuń_zamiennik">
+      <wsdl:input message="tns:Usuń_zamiennikSoapIn" />
+      <wsdl:output message="tns:Usuń_zamiennikSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Zmien_blokade_indeksu">
+      <wsdl:input message="tns:Zmien_blokade_indeksuSoapIn" />
+      <wsdl:output message="tns:Zmien_blokade_indeksuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik_id">
+      <wsdl:input message="tns:Dodaj_zamiennik_idSoapIn" />
+      <wsdl:output message="tns:Dodaj_zamiennik_idSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik">
+      <wsdl:input message="tns:Dodaj_zamiennikSoapIn" />
+      <wsdl:output message="tns:Dodaj_zamiennikSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IPOSoap" type="tns:IPOSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZrobBoosta">
+      <soap:operation soapAction="http://tempuri.org/ZrobBoosta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odrzuc_zlecenie">
+      <soap:operation soapAction="http://tempuri.org/Odrzuc_zlecenie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuń_zamiennik">
+      <soap:operation soapAction="http://tempuri.org/Usuń_zamiennik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zmien_blokade_indeksu">
+      <soap:operation soapAction="http://tempuri.org/Zmien_blokade_indeksu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik_id">
+      <soap:operation soapAction="http://tempuri.org/Dodaj_zamiennik_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik">
+      <soap:operation soapAction="http://tempuri.org/Dodaj_zamiennik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IPOSoap12" type="tns:IPOSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZrobBoosta">
+      <soap12:operation soapAction="http://tempuri.org/ZrobBoosta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odrzuc_zlecenie">
+      <soap12:operation soapAction="http://tempuri.org/Odrzuc_zlecenie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuń_zamiennik">
+      <soap12:operation soapAction="http://tempuri.org/Usuń_zamiennik" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zmien_blokade_indeksu">
+      <soap12:operation soapAction="http://tempuri.org/Zmien_blokade_indeksu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik_id">
+      <soap12:operation soapAction="http://tempuri.org/Dodaj_zamiennik_id" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dodaj_zamiennik">
+      <soap12:operation soapAction="http://tempuri.org/Dodaj_zamiennik" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPO">
+    <wsdl:port name="IPOSoap" binding="tns:IPOSoap">
+      <soap:address location="http://192.168.1.129/IPO.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IPOSoap12" binding="tns:IPOSoap12">
+      <soap12:address location="http://192.168.1.129/IPO.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTasksToDo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="okod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTasksToDoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTasksToDoResult" type="tns:ArrayOfExternal_tasks_list" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExternal_tasks_list">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="external_tasks_list" nillable="true" type="tns:external_tasks_list" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="external_tasks_list">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="contractor_order_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="device_id" />
+          <s:element minOccurs="0" maxOccurs="1" name="drawing_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="execution_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_a" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_b" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_g" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_h" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_p" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feature_q" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ipo_order_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="materials" type="tns:ArrayOfAnyType" />
+          <s:element minOccurs="0" maxOccurs="1" name="operation_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="order_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="order_no_cust" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="paramss" type="tns:ArrayOfAnyType" />
+          <s:element minOccurs="1" maxOccurs="1" name="params_enabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="part_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="priority" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="storage_place" />
+          <s:element minOccurs="1" maxOccurs="1" name="task_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="task_state" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StartTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="task_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="stop_time" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartTaskResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="task_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EndTaskResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Report_task">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="task_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Report_taskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Report_taskResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfExternal_tasks_list" nillable="true" type="tns:ArrayOfExternal_tasks_list" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTasksToDoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTasksToDo" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksToDoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTasksToDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:StartTask" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:StartTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:EndTask" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:EndTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskSoapIn">
+    <wsdl:part name="parameters" element="tns:Report_task" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskSoapOut">
+    <wsdl:part name="parameters" element="tns:Report_taskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksToDoHttpGetIn">
+    <wsdl:part name="okod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksToDoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfExternal_tasks_list" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskHttpGetIn">
+    <wsdl:part name="task_id" type="s:string" />
+    <wsdl:part name="stop_time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskHttpGetIn">
+    <wsdl:part name="task_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskHttpGetIn">
+    <wsdl:part name="task_id" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksToDoHttpPostIn">
+    <wsdl:part name="okod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksToDoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfExternal_tasks_list" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskHttpPostIn">
+    <wsdl:part name="task_id" type="s:string" />
+    <wsdl:part name="stop_time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StartTaskHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskHttpPostIn">
+    <wsdl:part name="task_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EndTaskHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskHttpPostIn">
+    <wsdl:part name="task_id" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Report_taskHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Prace_zewn_APISoap">
+    <wsdl:operation name="GetTasksToDo">
+      <wsdl:input message="tns:GetTasksToDoSoapIn" />
+      <wsdl:output message="tns:GetTasksToDoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <wsdl:input message="tns:StartTaskSoapIn" />
+      <wsdl:output message="tns:StartTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <wsdl:input message="tns:EndTaskSoapIn" />
+      <wsdl:output message="tns:EndTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <wsdl:input message="tns:Report_taskSoapIn" />
+      <wsdl:output message="tns:Report_taskSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Prace_zewn_APIHttpGet">
+    <wsdl:operation name="GetTasksToDo">
+      <wsdl:input message="tns:GetTasksToDoHttpGetIn" />
+      <wsdl:output message="tns:GetTasksToDoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <wsdl:input message="tns:StartTaskHttpGetIn" />
+      <wsdl:output message="tns:StartTaskHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <wsdl:input message="tns:EndTaskHttpGetIn" />
+      <wsdl:output message="tns:EndTaskHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <wsdl:input message="tns:Report_taskHttpGetIn" />
+      <wsdl:output message="tns:Report_taskHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Prace_zewn_APIHttpPost">
+    <wsdl:operation name="GetTasksToDo">
+      <wsdl:input message="tns:GetTasksToDoHttpPostIn" />
+      <wsdl:output message="tns:GetTasksToDoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <wsdl:input message="tns:StartTaskHttpPostIn" />
+      <wsdl:output message="tns:StartTaskHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <wsdl:input message="tns:EndTaskHttpPostIn" />
+      <wsdl:output message="tns:EndTaskHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <wsdl:input message="tns:Report_taskHttpPostIn" />
+      <wsdl:output message="tns:Report_taskHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Prace_zewn_APISoap" type="tns:Prace_zewn_APISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTasksToDo">
+      <soap:operation soapAction="http://tempuri.org/GetTasksToDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <soap:operation soapAction="http://tempuri.org/StartTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <soap:operation soapAction="http://tempuri.org/EndTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <soap:operation soapAction="http://tempuri.org/Report_task" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Prace_zewn_APISoap12" type="tns:Prace_zewn_APISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTasksToDo">
+      <soap12:operation soapAction="http://tempuri.org/GetTasksToDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <soap12:operation soapAction="http://tempuri.org/StartTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <soap12:operation soapAction="http://tempuri.org/EndTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <soap12:operation soapAction="http://tempuri.org/Report_task" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Prace_zewn_APIHttpGet" type="tns:Prace_zewn_APIHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetTasksToDo">
+      <http:operation location="/GetTasksToDo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <http:operation location="/StartTask" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <http:operation location="/EndTask" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <http:operation location="/Report_task" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Prace_zewn_APIHttpPost" type="tns:Prace_zewn_APIHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetTasksToDo">
+      <http:operation location="/GetTasksToDo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTask">
+      <http:operation location="/StartTask" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndTask">
+      <http:operation location="/EndTask" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Report_task">
+      <http:operation location="/Report_task" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Prace_zewn_API">
+    <wsdl:port name="Prace_zewn_APISoap" binding="tns:Prace_zewn_APISoap">
+      <soap:address location="http://192.168.1.20:10001/Prace_zewn_API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Prace_zewn_APISoap12" binding="tns:Prace_zewn_APISoap12">
+      <soap12:address location="http://192.168.1.20:10001/Prace_zewn_API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Prace_zewn_APIHttpGet" binding="tns:Prace_zewn_APIHttpGet">
+      <http:address location="http://192.168.1.20:10001/Prace_zewn_API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Prace_zewn_APIHttpPost" binding="tns:Prace_zewn_APIHttpPost">
+      <http:address location="http://192.168.1.20:10001/Prace_zewn_API.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="trans" Class="dbtransDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=database2;Initial Catalog=trans;Persist Security Info=True;User ID=valvex" SettingsObjectName="IPO_JDE_conn.Properties.Settings" SettingsPropertyName="transConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.H7_REKLASYFIKACJA" Member="H7_REKLASYFIKACJAs">
+    <Type Name="H7_REKLASYFIKACJA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="indeks_z" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="indeks_do" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ilosc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="magazyn_z" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lokalizacja_z" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="wynik" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Data_utw" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PALETY62" Member="PALETY62s">
+    <Type Name="PALETY62">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nr_palety" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lok" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Data_utw" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ANULOWANY" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Indeks" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

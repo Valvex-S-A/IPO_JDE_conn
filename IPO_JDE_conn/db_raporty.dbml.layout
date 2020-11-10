@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 11.5" name="db_raporty">
+  <DataContextMoniker Name="/db_raportyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6ba2b343-00f0-40e5-bdfc-dd76b0cfe0ea" isExpanded="false" absoluteBounds="2.75, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_DOMYŚLNE_MAGAZYNY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e8adbdc-5262-4dc4-be9c-9e706d8c615f" absoluteBounds="2.7649999999999997, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05e1ef9d-f4e6-4cdb-969d-698dfe7301ed" isExpanded="false" absoluteBounds="4.875, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_Tasks_korekta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df01b6bd-1601-43f4-a1ab-ba9913d94e0e" absoluteBounds="4.8900000000000006, 1.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ff1177e-9530-4d4a-8ea1-1b3b29e91141" isExpanded="false" absoluteBounds="8, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_Tasks_upd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d07c1d3b-2996-4a75-bc4b-243d0fbfd93c" absoluteBounds="8.015, 1.585, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0eda0244-9002-4ec0-9e21-cd59e0639caa" isExpanded="false" absoluteBounds="0.75, 4, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_Task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f2b9610-c9eb-4de6-8d5f-f678fb0dc88a" absoluteBounds="0.76499999999999968, 4.46, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8cd6ab5e-97a7-48aa-8862-30e9bfac9bf3" isExpanded="false" absoluteBounds="4.125, 2, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_ZDAWKA_PW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b24c415a-e72e-401f-91a8-fd7c05a4f303" absoluteBounds="4.14, 2.46, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03eff2fa-fde7-416c-a265-913dcb8fa5a8" isExpanded="false" absoluteBounds="5.875, 3.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_KKC_WYDRUKI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6b76f4e-3b26-48c9-b38d-de281eca5e21" absoluteBounds="5.89, 4.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a308420-a9c9-4b27-af78-34ead0d52e4a" isExpanded="false" absoluteBounds="0.75, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/słownik_TKW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f349199-07f4-44be-b9f6-51f2db5b6495" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0180dd75-a539-4607-91f2-e002754bd86c" isExpanded="false" absoluteBounds="2, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_ZDAWKA_PW_NORMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9524df45-a288-4a6c-9c12-693274b0e5a0" absoluteBounds="2.015, 2.585, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9f38e53-338a-45ec-97c0-b021aae7caf4" isExpanded="false" absoluteBounds="7, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_ZDAWKA_PW_4" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4422bcf2-e869-485b-9f22-35b1b8561acf" absoluteBounds="7.015, 3.085, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d160a7b4-5105-48ca-8fe6-3a9cedae5831" isExpanded="false" absoluteBounds="5.875, 10.75, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_Pracownicy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3be5c13d-8e77-49f6-bba3-c01fe1650cb9" absoluteBounds="5.89, 11.21, 1.9700000000000002, 15.8258056640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4092760d-b86a-4e91-8d99-d613c499d960" isExpanded="false" absoluteBounds="7.625, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_ZLECENIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6796bfe8-d4bf-4c65-8a22-c8ac0d7cf823" absoluteBounds="7.64, 1.085, 1.9700000000000002, 7.3645426432291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08e25957-ade1-45c2-b78a-1315eb90c412" isExpanded="false" absoluteBounds="3.25, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/RAPORT_MONTAZ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebd8d6c2-7b56-4b68-a5f6-e9e4d2a49d8e" absoluteBounds="3.2649999999999997, 3.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="328407f0-5aed-44fb-8958-ae9d23bd0676" isExpanded="false" absoluteBounds="1.125, 4.75, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/RAPORT_MONTAZ_KOREKTY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba58fabc-0876-4fab-b091-cc1a8679bfc8" absoluteBounds="1.1399999999999997, 5.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd02d946-e2a5-4158-9d20-c08090b2dc9e" isExpanded="false" absoluteBounds="3.75, 4.25, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_zamowienia_produkcji" />
+      <nestedChildShapes>
+        <elementListCompartment Id="380de600-4e26-494f-8a6f-a34e36389615" absoluteBounds="3.7649999999999997, 4.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e7f7d66-2508-42eb-91a0-b57a901020c2" isExpanded="false" absoluteBounds="6.625, 4.625, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/RAPORT_MONTAZ_1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a47fd592-d0d7-430d-a31f-45128360260a" absoluteBounds="6.64, 5.085, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7947ab66-aa48-4602-851e-22f64e122e5c" isExpanded="false" absoluteBounds="4.625, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_Przyjecia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75139c8c-8ddc-4916-b1fa-9495edd2e590" absoluteBounds="4.6400000000000006, 3.21, 1.9700000000000002, 7.3645426432291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7ca085c-639b-4487-a80f-4718716a6e39" isExpanded="false" absoluteBounds="8.25, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_Wydania" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d14d3d5a-0135-4d8e-893e-daef823062da" absoluteBounds="8.265, 3.96, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be912c2e-3338-4d8a-91be-075a781fe8b9" isExpanded="false" absoluteBounds="4.5, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_prace_zewn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e1807b5-97cd-44b4-91b7-a79d7a7b97a2" absoluteBounds="4.515, 5.71, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5768cc24-053a-4d93-9c18-5fd828853e26" isExpanded="false" absoluteBounds="8.125, 5.5, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_Materialy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed40ad0d-1425-4449-a44a-1871c9d4265f" absoluteBounds="8.14, 5.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="516cc8f1-2d52-4ce0-81a1-41de8f699316" isExpanded="false" absoluteBounds="5.75, 6, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_materialy_zlecenia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="446d2a88-f836-46ec-b859-b53a0163f1ad" absoluteBounds="5.765, 6.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="675edfb8-55f1-4afc-b562-f54ae828c76a" absoluteBounds="9.125, 4.625, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/db_raportyDataContext/IPO_MATERIALY_ZOP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c95b4da-6792-4892-aa18-431f10699b10" absoluteBounds="9.14, 5.085, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4dd488bb-5720-42f3-979d-95d415b9c5da" isExpanded="false" absoluteBounds="4.125, 3, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/INW_STANY_SPIS_ONLINE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d07e1d6-140a-4b36-b4cf-40b14ed58a40" absoluteBounds="4.14, 3.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6cc082f-6876-47e7-889c-758f90af42d0" absoluteBounds="4.75, 6.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/db_raportyDataContext/API_czynnosci_zewn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3ee796e-0f2c-4bdd-a7c0-3480929515c3" absoluteBounds="4.765, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
