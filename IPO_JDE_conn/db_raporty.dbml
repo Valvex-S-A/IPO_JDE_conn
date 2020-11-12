@@ -462,36 +462,6 @@
       <Column Name="praca_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.API_prace_zewn" Member="API_prace_zewns">
-    <Type Name="API_prace_zewn">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Stan_pracy" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
-      <Column Name="zlecenie" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="poprzedni" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="popis" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="poczatek" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="koniec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="iloscWe" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="iloscWy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="iloscBr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="okprac" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="Indeks_zlecenia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="nr_zam_klienta" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="dataUtworzenia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="KOLOR" Type="System.String" DbType="NChar(3)" CanBeNull="true" />
-      <Column Name="NAZWA" Type="System.String" DbType="NChar(60)" CanBeNull="true" />
-      <Column Name="GALW_TECHN" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
-      <Column Name="boost" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="cecha_A" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="cecha_B" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="cecha_P" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="cecha_Q" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="dataGraniczna" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="wsp" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="ilosc_zam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="priorytet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.API_Materialy" Member="API_Materialies">
     <Type Name="API_Materialy">
       <Column Name="IPO_LITM" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
@@ -566,6 +536,37 @@
       <Column Name="cnazwa" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="grupa" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="o_kod" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.API_prace_zewn" Member="API_prace_zewns">
+    <Type Name="API_prace_zewn">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Stan_pracy" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="zlecenie" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="poprzedni" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="popis" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="poczatek" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="koniec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iloscWe" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iloscWy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iloscBr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="okprac" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Indeks_zlecenia" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="nr_zam_klienta" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="dataUtworzenia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="KOLOR" Type="System.String" DbType="NChar(3)" CanBeNull="true" />
+      <Column Name="NAZWA" Type="System.String" DbType="NChar(60)" CanBeNull="true" />
+      <Column Name="GALW_TECHN" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="boost" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cecha_A" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cecha_B" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cecha_P" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cecha_Q" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="dataGraniczna" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="wsp" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ilosc_zam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="priorytet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="czynnosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.IPO_GET_TASK_ID" Method="IPO_GET_TASK_ID">

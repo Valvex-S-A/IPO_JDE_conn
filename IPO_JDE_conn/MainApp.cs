@@ -2374,7 +2374,7 @@ namespace IPO_JDE_conn
             var db = new db_raportyDataContext();
 
             var items = (from c in db.API_prace_zewns
-                         where (c.okprac == "Szlif_galw_" || c.okprac == "Szlifiernia") && c.KOLOR.Trim().Contains(fkolor) && c.NAZWA.Contains(f_nazwa) &&
+                         where c.czynnosc == 808 && c.KOLOR.Trim().Contains(fkolor) && c.NAZWA.Contains(f_nazwa) &&
                          c.cecha_A.ToLower().Trim().Contains(f_cechaA.ToLower()) &&
                          c.cecha_B.ToLower().Trim().Contains(f_cechaB.ToLower()) &&
                          c.cecha_P.ToLower().Trim().Contains(f_cechaP.ToLower()) &&

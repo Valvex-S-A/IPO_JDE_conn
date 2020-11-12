@@ -219,14 +219,6 @@ namespace IPO_JDE_conn
 			}
 		}
 		
-		public System.Data.Linq.Table<API_prace_zewn> API_prace_zewns
-		{
-			get
-			{
-				return this.GetTable<API_prace_zewn>();
-			}
-		}
-		
 		public System.Data.Linq.Table<API_Materialy> API_Materialies
 		{
 			get
@@ -264,6 +256,14 @@ namespace IPO_JDE_conn
 			get
 			{
 				return this.GetTable<API_czynnosci_zewn>();
+			}
+		}
+		
+		public System.Data.Linq.Table<API_prace_zewn> API_prace_zewns
+		{
+			get
+			{
+				return this.GetTable<API_prace_zewn>();
 			}
 		}
 		
@@ -8414,483 +8414,6 @@ namespace IPO_JDE_conn
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.API_prace_zewn")]
-	public partial class API_prace_zewn
-	{
-		
-		private int _id;
-		
-		private string _Stan_pracy;
-		
-		private System.Nullable<int> _zlecenie;
-		
-		private int _poprzedni;
-		
-		private string _popis;
-		
-		private System.Nullable<System.DateTime> _poczatek;
-		
-		private System.Nullable<System.DateTime> _koniec;
-		
-		private int _iloscWe;
-		
-		private int _iloscWy;
-		
-		private int _iloscBr;
-		
-		private string _okprac;
-		
-		private string _Indeks_zlecenia;
-		
-		private string _nr_zam_klienta;
-		
-		private System.DateTime _dataUtworzenia;
-		
-		private string _KOLOR;
-		
-		private string _NAZWA;
-		
-		private string _GALW_TECHN;
-		
-		private bool _boost;
-		
-		private string _cecha_A;
-		
-		private string _cecha_B;
-		
-		private string _cecha_P;
-		
-		private string _cecha_Q;
-		
-		private System.Nullable<System.DateTime> _dataGraniczna;
-		
-		private System.Nullable<double> _wsp;
-		
-		private int _ilosc_zam;
-		
-		private int _priorytet;
-		
-		public API_prace_zewn()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this._id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stan_pracy", DbType="VarChar(8) NOT NULL", CanBeNull=false)]
-		public string Stan_pracy
-		{
-			get
-			{
-				return this._Stan_pracy;
-			}
-			set
-			{
-				if ((this._Stan_pracy != value))
-				{
-					this._Stan_pracy = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_zlecenie", DbType="Int")]
-		public System.Nullable<int> zlecenie
-		{
-			get
-			{
-				return this._zlecenie;
-			}
-			set
-			{
-				if ((this._zlecenie != value))
-				{
-					this._zlecenie = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_poprzedni", DbType="Int NOT NULL")]
-		public int poprzedni
-		{
-			get
-			{
-				return this._poprzedni;
-			}
-			set
-			{
-				if ((this._poprzedni != value))
-				{
-					this._poprzedni = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_popis", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string popis
-		{
-			get
-			{
-				return this._popis;
-			}
-			set
-			{
-				if ((this._popis != value))
-				{
-					this._popis = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_poczatek", DbType="DateTime")]
-		public System.Nullable<System.DateTime> poczatek
-		{
-			get
-			{
-				return this._poczatek;
-			}
-			set
-			{
-				if ((this._poczatek != value))
-				{
-					this._poczatek = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_koniec", DbType="DateTime")]
-		public System.Nullable<System.DateTime> koniec
-		{
-			get
-			{
-				return this._koniec;
-			}
-			set
-			{
-				if ((this._koniec != value))
-				{
-					this._koniec = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscWe", DbType="Int NOT NULL")]
-		public int iloscWe
-		{
-			get
-			{
-				return this._iloscWe;
-			}
-			set
-			{
-				if ((this._iloscWe != value))
-				{
-					this._iloscWe = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscWy", DbType="Int NOT NULL")]
-		public int iloscWy
-		{
-			get
-			{
-				return this._iloscWy;
-			}
-			set
-			{
-				if ((this._iloscWy != value))
-				{
-					this._iloscWy = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscBr", DbType="Int NOT NULL")]
-		public int iloscBr
-		{
-			get
-			{
-				return this._iloscBr;
-			}
-			set
-			{
-				if ((this._iloscBr != value))
-				{
-					this._iloscBr = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_okprac", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string okprac
-		{
-			get
-			{
-				return this._okprac;
-			}
-			set
-			{
-				if ((this._okprac != value))
-				{
-					this._okprac = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Indeks_zlecenia", DbType="NVarChar(100)")]
-		public string Indeks_zlecenia
-		{
-			get
-			{
-				return this._Indeks_zlecenia;
-			}
-			set
-			{
-				if ((this._Indeks_zlecenia != value))
-				{
-					this._Indeks_zlecenia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nr_zam_klienta", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string nr_zam_klienta
-		{
-			get
-			{
-				return this._nr_zam_klienta;
-			}
-			set
-			{
-				if ((this._nr_zam_klienta != value))
-				{
-					this._nr_zam_klienta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataUtworzenia", DbType="DateTime NOT NULL")]
-		public System.DateTime dataUtworzenia
-		{
-			get
-			{
-				return this._dataUtworzenia;
-			}
-			set
-			{
-				if ((this._dataUtworzenia != value))
-				{
-					this._dataUtworzenia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOLOR", DbType="NChar(3)")]
-		public string KOLOR
-		{
-			get
-			{
-				return this._KOLOR;
-			}
-			set
-			{
-				if ((this._KOLOR != value))
-				{
-					this._KOLOR = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAZWA", DbType="NChar(60)")]
-		public string NAZWA
-		{
-			get
-			{
-				return this._NAZWA;
-			}
-			set
-			{
-				if ((this._NAZWA != value))
-				{
-					this._NAZWA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GALW_TECHN", DbType="VarChar(13)")]
-		public string GALW_TECHN
-		{
-			get
-			{
-				return this._GALW_TECHN;
-			}
-			set
-			{
-				if ((this._GALW_TECHN != value))
-				{
-					this._GALW_TECHN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_boost", DbType="Bit NOT NULL")]
-		public bool boost
-		{
-			get
-			{
-				return this._boost;
-			}
-			set
-			{
-				if ((this._boost != value))
-				{
-					this._boost = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_A", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string cecha_A
-		{
-			get
-			{
-				return this._cecha_A;
-			}
-			set
-			{
-				if ((this._cecha_A != value))
-				{
-					this._cecha_A = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_B", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string cecha_B
-		{
-			get
-			{
-				return this._cecha_B;
-			}
-			set
-			{
-				if ((this._cecha_B != value))
-				{
-					this._cecha_B = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_P", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string cecha_P
-		{
-			get
-			{
-				return this._cecha_P;
-			}
-			set
-			{
-				if ((this._cecha_P != value))
-				{
-					this._cecha_P = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_Q", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string cecha_Q
-		{
-			get
-			{
-				return this._cecha_Q;
-			}
-			set
-			{
-				if ((this._cecha_Q != value))
-				{
-					this._cecha_Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataGraniczna", DbType="DateTime")]
-		public System.Nullable<System.DateTime> dataGraniczna
-		{
-			get
-			{
-				return this._dataGraniczna;
-			}
-			set
-			{
-				if ((this._dataGraniczna != value))
-				{
-					this._dataGraniczna = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wsp", DbType="Float")]
-		public System.Nullable<double> wsp
-		{
-			get
-			{
-				return this._wsp;
-			}
-			set
-			{
-				if ((this._wsp != value))
-				{
-					this._wsp = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ilosc_zam", DbType="Int NOT NULL")]
-		public int ilosc_zam
-		{
-			get
-			{
-				return this._ilosc_zam;
-			}
-			set
-			{
-				if ((this._ilosc_zam != value))
-				{
-					this._ilosc_zam = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_priorytet", DbType="Int NOT NULL")]
-		public int priorytet
-		{
-			get
-			{
-				return this._priorytet;
-			}
-			set
-			{
-				if ((this._priorytet != value))
-				{
-					this._priorytet = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.API_Materialy")]
 	public partial class API_Materialy
 	{
@@ -9939,6 +9462,501 @@ namespace IPO_JDE_conn
 				if ((this._o_kod != value))
 				{
 					this._o_kod = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.API_prace_zewn")]
+	public partial class API_prace_zewn
+	{
+		
+		private int _id;
+		
+		private string _Stan_pracy;
+		
+		private System.Nullable<int> _zlecenie;
+		
+		private int _poprzedni;
+		
+		private string _popis;
+		
+		private System.Nullable<System.DateTime> _poczatek;
+		
+		private System.Nullable<System.DateTime> _koniec;
+		
+		private int _iloscWe;
+		
+		private int _iloscWy;
+		
+		private int _iloscBr;
+		
+		private string _okprac;
+		
+		private string _Indeks_zlecenia;
+		
+		private string _nr_zam_klienta;
+		
+		private System.DateTime _dataUtworzenia;
+		
+		private string _KOLOR;
+		
+		private string _NAZWA;
+		
+		private string _GALW_TECHN;
+		
+		private bool _boost;
+		
+		private string _cecha_A;
+		
+		private string _cecha_B;
+		
+		private string _cecha_P;
+		
+		private string _cecha_Q;
+		
+		private System.Nullable<System.DateTime> _dataGraniczna;
+		
+		private System.Nullable<double> _wsp;
+		
+		private int _ilosc_zam;
+		
+		private int _priorytet;
+		
+		private int _czynnosc;
+		
+		public API_prace_zewn()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stan_pracy", DbType="VarChar(8) NOT NULL", CanBeNull=false)]
+		public string Stan_pracy
+		{
+			get
+			{
+				return this._Stan_pracy;
+			}
+			set
+			{
+				if ((this._Stan_pracy != value))
+				{
+					this._Stan_pracy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_zlecenie", DbType="Int")]
+		public System.Nullable<int> zlecenie
+		{
+			get
+			{
+				return this._zlecenie;
+			}
+			set
+			{
+				if ((this._zlecenie != value))
+				{
+					this._zlecenie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_poprzedni", DbType="Int NOT NULL")]
+		public int poprzedni
+		{
+			get
+			{
+				return this._poprzedni;
+			}
+			set
+			{
+				if ((this._poprzedni != value))
+				{
+					this._poprzedni = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_popis", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string popis
+		{
+			get
+			{
+				return this._popis;
+			}
+			set
+			{
+				if ((this._popis != value))
+				{
+					this._popis = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_poczatek", DbType="DateTime")]
+		public System.Nullable<System.DateTime> poczatek
+		{
+			get
+			{
+				return this._poczatek;
+			}
+			set
+			{
+				if ((this._poczatek != value))
+				{
+					this._poczatek = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_koniec", DbType="DateTime")]
+		public System.Nullable<System.DateTime> koniec
+		{
+			get
+			{
+				return this._koniec;
+			}
+			set
+			{
+				if ((this._koniec != value))
+				{
+					this._koniec = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscWe", DbType="Int NOT NULL")]
+		public int iloscWe
+		{
+			get
+			{
+				return this._iloscWe;
+			}
+			set
+			{
+				if ((this._iloscWe != value))
+				{
+					this._iloscWe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscWy", DbType="Int NOT NULL")]
+		public int iloscWy
+		{
+			get
+			{
+				return this._iloscWy;
+			}
+			set
+			{
+				if ((this._iloscWy != value))
+				{
+					this._iloscWy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iloscBr", DbType="Int NOT NULL")]
+		public int iloscBr
+		{
+			get
+			{
+				return this._iloscBr;
+			}
+			set
+			{
+				if ((this._iloscBr != value))
+				{
+					this._iloscBr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_okprac", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string okprac
+		{
+			get
+			{
+				return this._okprac;
+			}
+			set
+			{
+				if ((this._okprac != value))
+				{
+					this._okprac = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Indeks_zlecenia", DbType="NVarChar(100)")]
+		public string Indeks_zlecenia
+		{
+			get
+			{
+				return this._Indeks_zlecenia;
+			}
+			set
+			{
+				if ((this._Indeks_zlecenia != value))
+				{
+					this._Indeks_zlecenia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nr_zam_klienta", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string nr_zam_klienta
+		{
+			get
+			{
+				return this._nr_zam_klienta;
+			}
+			set
+			{
+				if ((this._nr_zam_klienta != value))
+				{
+					this._nr_zam_klienta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataUtworzenia", DbType="DateTime NOT NULL")]
+		public System.DateTime dataUtworzenia
+		{
+			get
+			{
+				return this._dataUtworzenia;
+			}
+			set
+			{
+				if ((this._dataUtworzenia != value))
+				{
+					this._dataUtworzenia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KOLOR", DbType="NChar(3)")]
+		public string KOLOR
+		{
+			get
+			{
+				return this._KOLOR;
+			}
+			set
+			{
+				if ((this._KOLOR != value))
+				{
+					this._KOLOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAZWA", DbType="NChar(60)")]
+		public string NAZWA
+		{
+			get
+			{
+				return this._NAZWA;
+			}
+			set
+			{
+				if ((this._NAZWA != value))
+				{
+					this._NAZWA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GALW_TECHN", DbType="VarChar(13)")]
+		public string GALW_TECHN
+		{
+			get
+			{
+				return this._GALW_TECHN;
+			}
+			set
+			{
+				if ((this._GALW_TECHN != value))
+				{
+					this._GALW_TECHN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_boost", DbType="Bit NOT NULL")]
+		public bool boost
+		{
+			get
+			{
+				return this._boost;
+			}
+			set
+			{
+				if ((this._boost != value))
+				{
+					this._boost = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_A", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string cecha_A
+		{
+			get
+			{
+				return this._cecha_A;
+			}
+			set
+			{
+				if ((this._cecha_A != value))
+				{
+					this._cecha_A = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_B", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string cecha_B
+		{
+			get
+			{
+				return this._cecha_B;
+			}
+			set
+			{
+				if ((this._cecha_B != value))
+				{
+					this._cecha_B = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_P", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string cecha_P
+		{
+			get
+			{
+				return this._cecha_P;
+			}
+			set
+			{
+				if ((this._cecha_P != value))
+				{
+					this._cecha_P = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cecha_Q", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string cecha_Q
+		{
+			get
+			{
+				return this._cecha_Q;
+			}
+			set
+			{
+				if ((this._cecha_Q != value))
+				{
+					this._cecha_Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataGraniczna", DbType="DateTime")]
+		public System.Nullable<System.DateTime> dataGraniczna
+		{
+			get
+			{
+				return this._dataGraniczna;
+			}
+			set
+			{
+				if ((this._dataGraniczna != value))
+				{
+					this._dataGraniczna = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wsp", DbType="Float")]
+		public System.Nullable<double> wsp
+		{
+			get
+			{
+				return this._wsp;
+			}
+			set
+			{
+				if ((this._wsp != value))
+				{
+					this._wsp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ilosc_zam", DbType="Int NOT NULL")]
+		public int ilosc_zam
+		{
+			get
+			{
+				return this._ilosc_zam;
+			}
+			set
+			{
+				if ((this._ilosc_zam != value))
+				{
+					this._ilosc_zam = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_priorytet", DbType="Int NOT NULL")]
+		public int priorytet
+		{
+			get
+			{
+				return this._priorytet;
+			}
+			set
+			{
+				if ((this._priorytet != value))
+				{
+					this._priorytet = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_czynnosc", DbType="Int NOT NULL")]
+		public int czynnosc
+		{
+			get
+			{
+				return this._czynnosc;
+			}
+			set
+			{
+				if ((this._czynnosc != value))
+				{
+					this._czynnosc = value;
 				}
 			}
 		}

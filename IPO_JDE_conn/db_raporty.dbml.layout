@@ -104,12 +104,6 @@
         <elementListCompartment Id="d14d3d5a-0135-4d8e-893e-daef823062da" absoluteBounds="8.265, 3.96, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="be912c2e-3338-4d8a-91be-075a781fe8b9" isExpanded="false" absoluteBounds="4.5, 5.25, 2, 0.45">
-      <DataClassMoniker Name="/db_raportyDataContext/API_prace_zewn" />
-      <nestedChildShapes>
-        <elementListCompartment Id="7e1807b5-97cd-44b4-91b7-a79d7a7b97a2" absoluteBounds="4.515, 5.71, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="5768cc24-053a-4d93-9c18-5fd828853e26" isExpanded="false" absoluteBounds="8.125, 5.5, 2, 0.45">
       <DataClassMoniker Name="/db_raportyDataContext/API_Materialy" />
       <nestedChildShapes>
@@ -134,10 +128,16 @@
         <elementListCompartment Id="2d07e1d6-140a-4b36-b4cf-40b14ed58a40" absoluteBounds="4.14, 3.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e6cc082f-6876-47e7-889c-758f90af42d0" absoluteBounds="4.75, 6.125, 2, 1.5785953776041666">
+    <classShape Id="e6cc082f-6876-47e7-889c-758f90af42d0" isExpanded="false" absoluteBounds="1.625, 5.5, 2, 0.45">
       <DataClassMoniker Name="/db_raportyDataContext/API_czynnosci_zewn" />
       <nestedChildShapes>
-        <elementListCompartment Id="a3ee796e-0f2c-4bdd-a7c0-3480929515c3" absoluteBounds="4.765, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a3ee796e-0f2c-4bdd-a7c0-3480929515c3" absoluteBounds="1.6399999999999997, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3355de18-46b7-4c91-b3b6-13cb5726293a" isExpanded="false" absoluteBounds="4.125, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/db_raportyDataContext/API_prace_zewn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21b97ddd-ccff-4e40-8f61-6e28150d5998" absoluteBounds="4.14, 5.71, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
